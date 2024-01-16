@@ -4,23 +4,63 @@ using Microsoft.EntityFrameworkCore;
 #region
 ETicaretContext context = new();
 
-Product product = new Product()
-{
-    ProductName = "Razor Keyboard",
-    Price = 10,
-};
+//Console.WriteLine("hello");
 
-Product product1 = new Product()
-{
-    ProductName = "Logitech Prodigy 3300",
-    Price = 200,
-};
+//Product product = new Product()
+//{
+//    ProductName = "Razor Keyboard",
+//    Price = 10,
+//};
 
-#region context.AddAsync
+//Product product1 = new Product()
+//{
+//    ProductName = "Logitech Prodigy 3300",
+//    Price = 200,
+//};
 
-//await context.AddAsync(product);
-await context.AddRangeAsync(product, product1);
-await context.SaveChangesAsync();
+//Product product3 = new Product()
+//{
+//    ProductName = "Asus ROG 16.6 4090RTX",
+//    Price = 200,
+//};
+
+//User user1 = new User()
+//{
+//    Name = "User 1",
+//    LastName = "TPL",
+//    Email = "user1@gmail.com"
+//};
+
+//User user2 = new User()
+//{
+//    Name = "User 1",
+//    LastName = "TPL",
+//    Email = "user2@gmail.com"
+//};
+//User user3 = new User()
+//{
+//    Name = "User 3",
+//    LastName = "TPL1",
+//    Email = "user3@gmail.com"
+//};
+//User user4 = new User()
+//{
+//    Name = "User 4",
+//    LastName = "TPL 4",
+//    Email = "user4@gmail.com"
+//};
+
+ //Author author1 = new Author()
+ //{
+ //    Name = "A",
+ //};
+
+//await context.Users.AddRangeAsync(user1,user2,user3,user4);
+
+//#region context.AddAsync
+
+//await context.AddRangeAsync(product, product1);
+//await context.SaveChangesAsync();
 
 #endregion
 
@@ -124,5 +164,4 @@ await context.SaveChangesAsync();
 //Console.WriteLine(context.Entry(findProduct).State);
 
 
-#endregion
 #endregion
