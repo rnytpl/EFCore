@@ -1,1 +1,1 @@
-﻿Console.Write("damn");
+﻿using Microsoft.EntityFrameworkCore;
