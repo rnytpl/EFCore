@@ -16,4 +16,9 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Example\Example.csproj" />
+    <ProjectReference Include="..\Querying\Querying.csproj" />
+  </ItemGroup>
+
 </Project>
