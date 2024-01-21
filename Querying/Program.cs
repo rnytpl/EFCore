@@ -365,7 +365,9 @@ Console.WriteLine("Damn");
 //    Count = group.Count(),
 //    Fiyat = group.Key
 //}).ToListAsync();
+
 //Console.WriteLine();
+
 // Query Syntax
 
 //var data = (from urun in context.Products
