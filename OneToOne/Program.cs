@@ -87,6 +87,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 //        optionsBuilder.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 //    }
 
+    // Modellerin veritabanında generate edilecek yapıları bu fonksiyon içerisinde konfigüre edilir
 
 //}
 
