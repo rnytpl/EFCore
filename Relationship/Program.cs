@@ -29,22 +29,22 @@
 
 #region Principal Key
 
-class Calsian
-{
-    public int Id { get; set; }
-    public string CalisanAdi { get; set; }
-    public int DepartmanId { get; set; }
-    public Departman Departman { get; set; }
+//class Calsian
+//{
+//    public int Id { get; set; }
+//    public string CalisanAdi { get; set; }
+//    public int DepartmanId { get; set; }
+//    public Departman Departman { get; set; }
 
-}
+//}
 
-class Departman
-{
-    public int Id { get; set; }
-    public string DepartmanAdi { get; set;}
-    public ICollection<Departman> Calisan { get; set; }
+//class Departman
+//{
+//    public int Id { get; set; }
+//    public string DepartmanAdi { get; set;}
+//    public ICollection<Departman> Calisan { get; set; }
 
-}
+//}
 
 #endregion
 
@@ -69,6 +69,7 @@ class Departman
 
 // Çalışan ile departman arasında ki ilişki
 // Anne ve çocukları arasında ki ilişki
+
 #endregion
 
 #region Many to Many

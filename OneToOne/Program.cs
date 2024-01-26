@@ -7,16 +7,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 #region Default Convention
 
-//Her iki entity'de Nav Property ile birbirlerini trekil olarak referans ederek fiziksel bir ilişkinin olacağı ifade edilir
-// 1 to 1 ilikşki türünde, dependent entity hangisi olduğunu default olarak belirleyebilmek pek kolay değildir. Bu durumda fiziksel olarak bir foreign key'e karşılık property/kolon tanımlayarak çözebiliyoruz
-// Böylece Foreign Key'e karşılık property tanımlayarak lüzumsuz bir kolon oluşturmuş oluyoruz
+//Her iki entity'de Nav Property ile birbirlerini tekil olarak referans ederek fiziksel bir ilişkinin olacağı ifade edilir
 
+// 1 to 1 ilişki türünde, dependent entity hangisi olduğunu default olarak belirleyebilmek pek kolay değildir. Bu durumda dependent entity'de fiziksel olarak bir foreign key'e karşılık property/kolon tanımlayarak çözebiliyoruz
+
+// Foreign Key'e karşılık property tanımlamak lüzumsuz bir maliyettir
 
 //public class Calisan
 //{
 //    public int Id { get; set; }
 //    public string Adi { get; set; }
-//    public CalisanAdresi CalisanAdresi {  set; get; }
+//    public CalisanAdresi CalisanAdresi { set; get; }
 
 //}
 
@@ -25,16 +26,21 @@ using System.ComponentModel.DataAnnotations.Schema;
 //    public int Id { get; set; }
 //    public int CalisanId { get; set; }
 //    public string Adres { get; set; }
-//    public Calisan Calisan {  set; get; }
+//    public Calisan Calisan { set; get; }
 //}
 
 #endregion
 
 #region Data Annotations
+
 // Navigation Property'ler tanımlanmalıdır
+
 // Foreign kolonunun ismi default convention'ın dışında bir kolon olacaksa eğer ForeignKey attribute ile bunu bildirebiliriz
+
 // Foreign Key kolonu oluşturulmak zorunda değildir.
+
 // Bire bir ilişkide ekstradan foreign key kolonuna ihtiyaç olmayacağından dolayı dependent entity'de ki id kolonunun hem foreign key hemde primary key olarak kullanmayı tercih ediyoruz ve bu duruma özen gösterilmelidir
+
 //public class Calisan
 //{
 //    public int Id { get; set; }
@@ -56,6 +62,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 #region Fluent API
 
 // Navigation propler tanımlanmalıdır
+
 // Fluent API yönteminde entityler arasında ki ilşki contect sınıfı içerisinde OnModelCreating Fonksiyonu override edilerek metotlar aracılığıyla tasarlanması gerekmektedir. Yani tüm sorumluluk bu fonksiyon içerisindeki çalışmalardador
 
 //public class Calisan
@@ -70,11 +77,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 //{
 //    public int Id { get; set; }
 //    public string DepartmanAdi { get; set; }
-//    public ICollection<Calisan> Calisanlar { get; set; }
+//    public Calisan Calisan { get; set; }
 //}
 
 
-//#endregion
+////#endregion
 
 //public class ETicaretContext : DbContext
 //{
@@ -87,7 +94,14 @@ using System.ComponentModel.DataAnnotations.Schema;
 //        optionsBuilder.UseQueryTrackingBehavior(QueryTrackingBehavior.NoTracking);
 //    }
 
-    // Modellerin veritabanında generate edilecek yapıları bu fonksiyon içerisinde konfigüre edilir
+//    // Modellerin veritabanında generate edilecek yapıları bu fonksiyon içerisinde konfigüre edilir
+
+//    protected override void OnModelCreating(ModelBuilder modelBuilder)
+//    {
+//        modelBuilder.Entity<Calisan>().HasKey(c => c.Id);
+
+//        modelBuilder.Entity<Calisan>().HasOne(c => c.Departman).WithOne(d => d.Calisan).HasForeignKey<Calisan>(c => c.Id);
+//    }
 
 //}
 

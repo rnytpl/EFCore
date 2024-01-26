@@ -27,7 +27,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 #endregion
 
 #region Data Annotations
-// Cross Table manuel olarka oluşturulmalıdır
+// Cross Table manuel olarak oluşturulmalıdır
 // Entity'lerde oluşturduğumuz cross table entity'si ile bire çok bir ilişki kurulmalı
 // Cross Table'da composite primary key'i data annotation attributelar ile manuel olarak kuramıyoruz
 // Bunun için de FluentAPI'da çalışma yapmamız gerekiyor

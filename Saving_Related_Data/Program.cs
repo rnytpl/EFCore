@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Reflection.Metadata;
 
-Console.WriteLine("Damn");
+//Console.WriteLine("Damn");
 
-ApplicationDbContext context = new();
+//ApplicationDbContext context = new();
 
 #region One To One İlişkisel Senaryolarda Veri Ekleme
 
@@ -36,6 +36,7 @@ ApplicationDbContext context = new();
 
 
 //#endregion
+
 //class Person
 //{
 //    public int Id { get; set; }
@@ -114,7 +115,7 @@ ApplicationDbContext context = new();
 
 #endregion
 
-#region 2. Yöntem -> Dependent Entity üzeribdeb Principal Entity Verisi EKleme
+#region 2. Yöntem -> Dependent Entity üzeribden Principal Entity Verisi EKleme
 
 //Post post1 = new()
 //{
@@ -235,67 +236,65 @@ ApplicationDbContext context = new();
 
 // n to n ilişkisi eğer ki fluent api ile tasarlanmışsa kullanılan bir yöntemdir
 
-Author author = new()
-{
-    AuthorName = "Author 2",
-    Books = new HashSet<BookAuthor>()
-    {
-        new () { Book = new() {BookName = "B Book"}}
-    },
-};
+//Author author = new()
+//{
+//    AuthorName = "Author 2",
+//    Books = new HashSet<BookAuthor>()
+//    {
+//        new () { Book = new() {BookName = "B Book"}}
+//    },
+//};
 
-await context.Authors.AddAsync(author);
-await context.SaveChangesAsync();
+//await context.Authors.AddAsync(author);
+//await context.SaveChangesAsync();
 
-class Book
-{
-    public int Id { get; set; }
-    public string BookName { get; set; }
-    public ICollection<BookAuthor> Authors { get; set; }
-}
+//class Book
+//{
+//    public int Id { get; set; }
+//    public string BookName { get; set; }
+//    public ICollection<BookAuthor> Authors { get; set; }
+//}
 
-class BookAuthor
-{
-    public int BookId { get; set; }
-    public int AuthorId { get; set; }
-    public Book Book { get; set; }
-    public Author Author { get; set; }
-}
+//class BookAuthor
+//{
+//    public int BookId { get; set; }
+//    public int AuthorId { get; set; }
+//    public Book Book { get; set; }
+//    public Author Author { get; set; }
+//}
 
-class Author
-{
-    public int Id { get; set; }
-    public string AuthorName { get; set; }
-    public ICollection<BookAuthor> Books { get; set; }
-}
+//class Author
+//{
+//    public int Id { get; set; }
+//    public string AuthorName { get; set; }
+//    public ICollection<BookAuthor> Books { get; set; }
+//}
 
-class ApplicationDbContext : DbContext
-{
-    public DbSet<Book> Books { get; set; }
-    public DbSet<Author> Authors { get; set; }
+//class ApplicationDbContext : DbContext
+//{
+//    public DbSet<Book> Books { get; set; }
+//    public DbSet<Author> Authors { get; set; }
 
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        optionsBuilder.UseSqlServer("Server=LAPTOP-EFPS8KL8; Database=SavingRelatedDataManyToMany;User Id=LAPTOP-EFPS8KL8\\huawei;Trusted_Connection=True");
-    }
+//    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+//    {
+//        optionsBuilder.UseSqlServer("Server=LAPTOP-EFPS8KL8; Database=SavingRelatedDataManyToMany;User Id=LAPTOP-EFPS8KL8\\huawei;Trusted_Connection=True");
+//    }
 
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
-    {
-        modelBuilder.Entity<BookAuthor>().HasKey(ba => new
-        {
-            ba.AuthorId,
-            ba.BookId
-        });
+//    protected override void OnModelCreating(ModelBuilder modelBuilder)
+//    {
+//        modelBuilder.Entity<BookAuthor>().HasKey(ba => new
+//        {
+//            ba.AuthorId,
+//            ba.BookId
+//        });
 
-        modelBuilder.Entity<BookAuthor>().HasOne(c => c.Book).WithMany(a => a.Authors).HasForeignKey(ba => ba.BookId);
-        modelBuilder.Entity<BookAuthor>().HasOne(a => a.Author).WithMany(a => a.Books).HasForeignKey(ba => ba.AuthorId);
-    }
+//        modelBuilder.Entity<BookAuthor>().HasOne(c => c.Book).WithMany(a => a.Authors).HasForeignKey(ba => ba.BookId);
+//        modelBuilder.Entity<BookAuthor>().HasOne(a => a.Author).WithMany(a => a.Books).HasForeignKey(ba => ba.AuthorId);
+//    }
 
-}
+//}
 
 #endregion
-
-
 
 #endregion
 
