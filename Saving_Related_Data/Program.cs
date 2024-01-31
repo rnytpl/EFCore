@@ -6,7 +6,7 @@ using System.Reflection.Metadata;
 //ApplicationDbContext context = new();
 
 #region One To One İlişkisel Senaryolarda Veri Ekleme
-
+//Eğer ki principal entity üzerinden ekleme gerçekleştiriliyorsa dependent entity nesnesi verilmek zorunda değildir! Amma velakin, dependent entity üzerinden ekleme işlemi gerçekleştiriliyorsa eğer burada principal entitynin nesnesine ihtiyacımız zaruridir.
 //#region 1st Method -> Principal Entity üzerinden dependent Entity Verisi Ekleme
 
 //Person person = new();
@@ -20,7 +20,7 @@ using System.Reflection.Metadata;
 
 //#endregion
 
-//#region 2nd Method -> Dependent Entity üzerinden dependent Entity Verisi Ekleme
+//#region 2nd Method -> Dependent Entity üzerinden Principal Entity Verisi Ekleme
 
 //Address adres = new Address {
 //    PersonAddress = "İdealtepe/İstanbul",

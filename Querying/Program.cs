@@ -399,7 +399,7 @@ Console.WriteLine("Damn");
 #region ChangeTracker nedir
 
 // Context nesnesi üzerinden gelen tüm nesneler/veriler otomatik olarak bir takip mekanizması tarafından izlenirler.
-// İşte bu takip mekanızması CHangeTracker'dir.
+// İşte bu takip mekanızması ChangeTracker'dir.
 // ChangeTracker ile nesneler üzerindeki değişiklikler/işlemler takip edilerek netice itibariyle bu işlemlerin fıtratına uygun sql sorgucukları generate edilir
 // Bu işleme de ChangeTracking denir.
 
@@ -408,6 +408,7 @@ Console.WriteLine("Damn");
 #region ChangeTracker Property
 
 // Takip edilen nesnelere erişebilmemizi sağlayan ve gerektiği takdirde işlemler gerçekleştirmemizi sağlayan bir property'dir.
+
 // Context sınıfının base class'i olan DbContext sınıfının bir üyesidir
 
 //var urunler = await context.Products.ToListAsync();
@@ -421,8 +422,11 @@ Console.WriteLine("Damn");
 #region Detect Changes
 
 // EF Core, context nesnesi tarafından izlenen tüm nesnelerdeki değişiklikleri change tracker sayesinde takip edebilmekte ve nesnelerde olan verisel değişiklikler yakalanarak bunların anlık görüntüleri(snapshot)ni oluşturabilir
+
 // Yapılan değişiklerin veritabanına gönderilmeden önce algılandığından emin olmak gerekir. SaveChanges fonksiyonu çağrıldığı anda nesneler EF Core tarafından otomatik kontrol edilirler
+
 // Ancak yapılan operasyonlarda güncel tracking verilerinden emin olabilmek için değişikliklerin algılanmasını opsiyonel olarak gerçekleştirmek isteyebiliriz.
+
 // İşte bunun için detect changes fonksiyonu kullanılabilir ve her ne kadar ef core değişiklikleri otomatik olarak algılıyor olsada siz yine de kontrole zorlayabilirsiniz
 
 //Product urun = await context.Products.FirstOrDefaultAsync(u => u.Id == new Guid()) ;
