@@ -27,6 +27,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Shadow_Properties", "Shadow
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_Core_Configurations", "Entity_Configurations\EF_Core_Configurations.csproj", "{4985F4F1-0BCA-4BB5-832F-2E66E420157E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generated_Values", "Generated_Values\Generated_Values.csproj", "{F540758D-BB61-40E4-987F-2AAD24C4F277}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -81,6 +83,10 @@ Global
 		{4985F4F1-0BCA-4BB5-832F-2E66E420157E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4985F4F1-0BCA-4BB5-832F-2E66E420157E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4985F4F1-0BCA-4BB5-832F-2E66E420157E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F540758D-BB61-40E4-987F-2AAD24C4F277}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F540758D-BB61-40E4-987F-2AAD24C4F277}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F540758D-BB61-40E4-987F-2AAD24C4F277}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F540758D-BB61-40E4-987F-2AAD24C4F277}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
