@@ -49,7 +49,7 @@ ETicaretContext context = new();
 
 #region IQueryable
 // Sorguya karşılık gelir
-// EF Core üzerinden yapılmış olajn sorgunun execute edilmemişl halini ifade eder
+// EF Core üzerinden yapılmış olan sorgunun execute edilmemişl halini ifade eder
 #endregion
 
 #region IEnumerable
@@ -145,6 +145,7 @@ ETicaretContext context = new();
 #region Single Async
 
 // Eğer ki sorgu neticesinde birden fazla veri geliyorsa yada hiç gelmiyorsa her iki durumda da exception fırlatır
+
 #region Tek Kayıt Geldiğinde
 
 //var tekUrun = await context.Products.SingleAsync(u => u.Id == Guid.Parse("a32cfff1-3a07-43ea-1aba-08dc0cebb7f8"));
@@ -170,6 +171,7 @@ ETicaretContext context = new();
 #region SingleOrDefaultAsync
 
 // Eğer ki sorgu neticesinde birden fazla veri geliyorsa exception fırlatır
+
 #region Tek Kayıt Geldiğinde
 
 //var tekUrun = await context.Products.SingleOrDefaultAsync
@@ -229,6 +231,7 @@ ETicaretContext context = new();
 #region FindAsync
 // Find fonksiyonu, primary key kolonuna özel hızlı ir şekilde sorgulama yapmamızı sağlayan bir fonksiyondur.
 // Sonuç bulunmazsa 
+
 //Product urun = await context.Products.FindAsync(Guid.Parse("e6ee4b0e-ab12-4917-81a1-08dc1185e21b"));
 
 //

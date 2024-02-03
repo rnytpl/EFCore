@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF_Core_Configurations", "E
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generated_Values", "Generated_Values\Generated_Values.csproj", "{F540758D-BB61-40E4-987F-2AAD24C4F277}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Seperate_Confirugration_Classes", "Seperate_Confirugration_Classes\Seperate_Confirugration_Classes.csproj", "{81E0CC3F-5E38-446D-841A-CB795E4E1CAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{F540758D-BB61-40E4-987F-2AAD24C4F277}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F540758D-BB61-40E4-987F-2AAD24C4F277}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F540758D-BB61-40E4-987F-2AAD24C4F277}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81E0CC3F-5E38-446D-841A-CB795E4E1CAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81E0CC3F-5E38-446D-841A-CB795E4E1CAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81E0CC3F-5E38-446D-841A-CB795E4E1CAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81E0CC3F-5E38-446D-841A-CB795E4E1CAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

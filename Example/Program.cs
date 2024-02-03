@@ -142,11 +142,6 @@ ETicaretContext context = new();
 
 //List<Product> products = await context.Products.Where(u => u.Id >= Guid.Parse("lşksdflşsdlşfksdlkfklsdfklsdklfş") && u.Id <= Guid.Parse("a32cfff1-3a07-43ea-1aba-08dc0cebb7f8").ToListAsync();
 
-
-
-
-
-
 #endregion
 
 #region EF Core Açısından bir Verinin Güncellenmesi Gerektiği nasıl anlaşılıyor
