@@ -41,6 +41,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constraints", "Constraints\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indexes", "Indexes\Indexes.csproj", "{0A6DA616-A039-442A-B4E6-3EEF97E0A295}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sequences", "Sequences\Sequences.csproj", "{2AAE7EED-F20B-47F1-A6ED-E0DEA36BEF79}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loading_Related_Data_Eager_Loading", "Loading_Related_Data_Eager_Loading\Loading_Related_Data_Eager_Loading.csproj", "{51620B58-38A0-4D4A-B20F-6F00007DA928}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +127,14 @@ Global
 		{0A6DA616-A039-442A-B4E6-3EEF97E0A295}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0A6DA616-A039-442A-B4E6-3EEF97E0A295}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0A6DA616-A039-442A-B4E6-3EEF97E0A295}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2AAE7EED-F20B-47F1-A6ED-E0DEA36BEF79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2AAE7EED-F20B-47F1-A6ED-E0DEA36BEF79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2AAE7EED-F20B-47F1-A6ED-E0DEA36BEF79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2AAE7EED-F20B-47F1-A6ED-E0DEA36BEF79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51620B58-38A0-4D4A-B20F-6F00007DA928}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51620B58-38A0-4D4A-B20F-6F00007DA928}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51620B58-38A0-4D4A-B20F-6F00007DA928}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51620B58-38A0-4D4A-B20F-6F00007DA928}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
