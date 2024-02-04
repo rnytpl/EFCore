@@ -18,30 +18,37 @@ using System.Reflection.Metadata;
 //await context.AddAsync(person);
 //await context.SaveChangesAsync();
 
-//#endregion
+//var findPerson = await context.Persons.Include(p => p.Address).FirstOrDefaultAsync(p => p.Id == 2);
 
-//#region 2nd Method -> Dependent Entity üzerinden Principal Entity Verisi Ekleme
+//findPerson.Address.PersonAddress = "Gebze/İstanbul";
 
-//Address adres = new Address {
-//    PersonAddress = "İdealtepe/İstanbul",
-//    Person = new() { 
-//        Name = "Turgay",
-//    }
+//await context.SaveChangesAsync();
+
+#endregion
+
+#region 2nd Method -> Dependent Entity üzerinden Principal Entity Verisi Ekleme
+
+//Address adres = new Address
+//{
+//PersonAddress = "İdealtepe/İstanbul",
+//Person = new()
+//{
+//Name = "Turgay",
+//}
 //};
 
 //await context.AddAsync(adres);
 //await context.SaveChangesAsync();
 
-////adres.PersonAddress = "İdealtepe/İstanbul";
+//adres.PersonAddress = "İdealtepe/İstanbul";
 
 
-//#endregion
 
 //class Person
 //{
 //    public int Id { get; set; }
 //    public string Name { get; set; }
-//    public Address  Address { get; set; }
+//    public Address Address { get; set; }
 //}
 
 //class Address
@@ -140,8 +147,8 @@ using System.Reflection.Metadata;
 #endregion
 //class Blog
 //{
-//    // We've to initialize a HashSet collection of Post type inside Blog's constructor
-//    // Otherwise when a member of Blog is null and accessed, you will encounter null reference exception error
+//    // We've to initialize a HashSet collection of Post type inside Blog entity's constructor
+//    // Otherwise when an object member of Blog is null and accessed, you will encounter null reference exception error
 //    public Blog()
 //    {
 //        Posts = new HashSet<Post>();

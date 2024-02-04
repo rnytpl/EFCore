@@ -29,7 +29,7 @@
 //    Name = "Rny"
 //};
 
-//Person person1 = new Person()0
+//Person person1 = new Person()
 //{
 //    Name = "Gençay"
 //};
@@ -41,19 +41,24 @@
 #endregion
 
 #region 2. Durum - Bağımlı verinin ilişkisel olduğu ana veriyi güncelleme
-
-//Address adres = await context.Addresses.FindAsync(1);
-//context.Addresses.Remove(adres);
+//Address? address = await context.Addresses.FindAsync(1);
+//address.Id = 2;
 //await context.SaveChangesAsync();
 
-//Person? person = await context.Persons.FindAsync(1);
-//adres.Person = person;
+//Address? address = await context.Addresses.FindAsync(2);
+//context.Addresses.Remove(address);
 //await context.SaveChangesAsync();
 
-//adres.Person = new()
+////Person? person = await context.Persons.FindAsync(2);
+////address.Person = person;
+
+//address.Person = new()
 //{
-//    Name = "Cani"
+//    Name = "Rıfkı"
 //};
+//await context.Addresses.AddAsync(address);
+
+//await context.SaveChangesAsync();
 
 #endregion
 

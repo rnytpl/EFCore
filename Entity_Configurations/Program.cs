@@ -48,7 +48,7 @@ ApplicationDbContext context = new();
 #region Key - HasKey - [PrimaryKey] as PK
 //EF Core'da, default convention olarak bir entity'nin içerisinde Id, ID, EntityId, EntityID vs. şeklinde tanımlanan tüm proeprtylere varsayılan olarak primary key constraint uygulanır.
 //Key ya da HasKey yapılanmalarıyla istediğinmiz her hangi bir proeprty'e default convention dışında pk uygulayabiliriz.
-//EF Core'da bir entity içerisinde kesinlikle PK'i temsil edecek olan property bulunmalıdır. Aksi taktirde EF Core migration olutşurken hata verecektir. Eğer ki tablonun PK'i yoksa bunun bildirilmesi gerekir. 
+//EF Core'da bir entity içerisinde kesinlikle PK'i temsil edecek olan property bulunmalıdır. Aksi taktirde EF Core migration oluşurken hata verecektir. Eğer ki tablonun PK'i yoksa bunun bildirilmesi gerekir. 
 #endregion
 
 #region Timestamp - IsRowVersion
@@ -59,7 +59,7 @@ ApplicationDbContext context = new();
 
 #region Required - IsRequired
 //Bir kolonun nullable ya da not null olup olmamasını bu konfigürasyonla belirleyebiliriz.
-//EF Core'da bir property default oalrak not null şeklinde tanımlanır. Eğer ki property'si nullable yapmak istyorsak türü üzerinde ?(nullable) operatörü ile bbildirimde bulunmamız gerekmektedir.
+//EF Core'da bir property default oalrak not null şeklinde tanımlanır. Eğer ki property'si nullable yapmak istyorsak türü üzerinde ?(nullable) operatörü ile bildirimde bulunmamız gerekmektedir.
 #endregion
 
 #region MaxLenght | StringLength - HasMaxLength

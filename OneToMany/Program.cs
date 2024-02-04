@@ -3,12 +3,14 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 #region Default COnvention
-// Default convention ymnteminde foreign key kolununa karşılık gelen property'i tanımladığımızda bu property ismi temel geleneksel entity tanımlama kurallarına uymuyorsa eğer Data Annotations ile müdahalede bulunabiliriz.
+// Default convention yönteminde foreign key kolununa karşılık gelen property'i tanımladığımızda bu property ismi temel geleneksel entity tanımlama kurallarına uymuyorsa eğer Data Annotations ile müdahalede bulunabiliriz.
 
 //public class Calisan
 //{
 //    public int Id { get; set; }
 
+// The reason why we retrieve the name of a variable as a string name is 
+// in case property name is altered or removed, it makes sures that specified name actually exists and provides compile-time safety
 //    [ForeignKey(nameof(Departman))]
 //    public int DepId { get; set; }
 //    public string Adi { get; set; }

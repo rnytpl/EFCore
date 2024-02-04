@@ -58,12 +58,6 @@
 //Esas tablodan herhangi bir veri silinmeye çalışıldığında o veriye karşılık dependent table'da ilişkisel veri/ler varsa eğer bu sefer bu silme işlemini engellemesini sağlar.
 #endregion
 
-#region Restrict
-
-// Esas tablodan herhangi bir veri silinmeye çalışıldığında o veriye karşılık dependent table'da ilişkisel veri/ler varsa eğer bu sefer silme işleminie engellemesini sağlar
-
-#endregion
-
 #endregion
 
 #region Saving Data

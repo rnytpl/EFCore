@@ -32,6 +32,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 // Cross Table'da composite primary key'i data annotation attributelar ile manuel olarak kuramıyoruz
 // Bunun için de FluentAPI'da çalışma yapmamız gerekiyor
 // Cross Table'a karşılık bir entity modeli oluşturuyorsa eğer bunu context sınıfı içerisinde DbSEt prop'ı olarak bildirmek mecburiyetinde değiliz
+
 //public class Kitap
 //{
 //    public int Id { get; set; }
@@ -123,6 +124,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 //        modelBuilder.Entity<KitapYazar>().HasKey(ky => new { ky.KitapId, ky.YazarId });
 
 //        modelBuilder.Entity<KitapYazar>().HasOne(c => c.Kitap).WithMany(k => k.Yazarlar).HasForeignKey(ky => ky.KitapId);
+
 //        modelBuilder.Entity<KitapYazar>().HasOne(c => c.Yazar).WithMany(y => y.Kitaplar).HasForeignKey(ky => ky.YazarId);
 //    }
 
