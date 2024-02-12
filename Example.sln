@@ -35,15 +35,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Seed_Data", "Seed_Data\Seed
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inheritance_Table_Per_Hierarchy", "Inheritance_Table_Per_Hierarchy\Inheritance_Table_Per_Hierarchy.csproj", "{4795D7F9-B9AD-4ADF-8B03-6D4BAB109B96}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inheritance_Table_Per_Type", "Inheritance_Table_Per_Type\Inheritance_Table_Per_Type.csproj", "{DAF2B2B1-F369-4916-A6E4-07A066486B23}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Inheritance_Table_Per_Type", "Inheritance_Table_Per_Type\Inheritance_Table_Per_Type.csproj", "{DAF2B2B1-F369-4916-A6E4-07A066486B23}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constraints", "Constraints\Constraints.csproj", "{E29AF400-941C-4A6D-ADA3-6B37C01930AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Constraints", "Constraints\Constraints.csproj", "{E29AF400-941C-4A6D-ADA3-6B37C01930AD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indexes", "Indexes\Indexes.csproj", "{0A6DA616-A039-442A-B4E6-3EEF97E0A295}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Indexes", "Indexes\Indexes.csproj", "{0A6DA616-A039-442A-B4E6-3EEF97E0A295}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sequences", "Sequences\Sequences.csproj", "{2AAE7EED-F20B-47F1-A6ED-E0DEA36BEF79}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sequences", "Sequences\Sequences.csproj", "{2AAE7EED-F20B-47F1-A6ED-E0DEA36BEF79}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loading_Related_Data_Eager_Loading", "Loading_Related_Data_Eager_Loading\Loading_Related_Data_Eager_Loading.csproj", "{51620B58-38A0-4D4A-B20F-6F00007DA928}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loading_Related_Data_Eager_Loading", "Loading_Related_Data_Eager_Loading\Loading_Related_Data_Eager_Loading.csproj", "{51620B58-38A0-4D4A-B20F-6F00007DA928}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChangeTracker", "ChangeTracker\ChangeTracker.csproj", "{7EA35259-B001-43F8-8E38-437CF22B0D39}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -135,6 +137,10 @@ Global
 		{51620B58-38A0-4D4A-B20F-6F00007DA928}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{51620B58-38A0-4D4A-B20F-6F00007DA928}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{51620B58-38A0-4D4A-B20F-6F00007DA928}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EA35259-B001-43F8-8E38-437CF22B0D39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EA35259-B001-43F8-8E38-437CF22B0D39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EA35259-B001-43F8-8E38-437CF22B0D39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EA35259-B001-43F8-8E38-437CF22B0D39}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
