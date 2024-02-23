@@ -1,72 +1,73 @@
-﻿//using Microsoft.EntityFrameworkCore;
-//using Microsoft.EntityFrameworkCore.Metadata.Builders;
-//using System.Reflection;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using System.Reflection;
 
-//#region OnModelCreating
+#region OnModelCreating
 
-//// Entityler üzerinde konfigürasyonel çalışmalar yapmamızı sağlayan bir fonksiyondur
+// Entityler üzerinde konfigürasyonel çalışmalar yapmamızı sağlayan bir fonksiyondur
 
-//#endregion
+#endregion
 
-//#region IEntityTypeConfiguration<T> Arayüzü
+#region IEntityTypeConfiguration<T> Arayüzü
 
-//// Entity bazlı yapılacak olan konfigürasyonları o entity'e özel harici bir dosya üzerinde yapmamızı sağlayan bir arayüzdür
+// Entity bazlı yapılacak olan konfigürasyonları o entity'e özel harici bir dosya üzerinde yapmamızı sağlayan bir arayüzdür
 
-//// Harici bir dosyada konfigürasyonların yürütülmesi merkezi bir yapılandırma noktası oluşturmamızı sağlamaktadır
+// Harici bir dosyada konfigürasyonların yürütülmesi merkezi bir yapılandırma noktası oluşturmamızı sağlamaktadır
 
-//// Harici bir dosyada konfigürasyonların yürütülmesi entity sayısınını fazla olduğu senaryolarda yönetilebilirliği arttıracak ve yapılandırma ile ilgili geliştiricinin yükünü azaltacaktır
+// Harici bir dosyada konfigürasyonların yürütülmesi entity sayısınını fazla olduğu senaryolarda yönetilebilirliği arttıracak ve yapılandırma ile ilgili geliştiricinin yükünü azaltacaktır
 
-//#endregion
+#endregion
 
-//#region ApplyConfiguration Metodu
+#region ApplyConfiguration Metodu
 
-//// Bu method harici konfigürasyonel sınıflarmızıu EF Core'a bildirebilmek için kullandığımız bir metotdur.
+// Bu method harici konfigürasyonel sınıflarmızıu EF Core'a bildirebilmek için kullandığımız bir metotdur.
 
-//#endregion
+#endregion
 
-//#region ApplyConfigurationsFromAssembly Metodu
+#region ApplyConfigurationsFromAssembly Metodu
 
-//// Uygulama bazında oluşturulan harici konfigürasyonel sınıfların her birini OnModelCreating metodunda ApplyConfiguration metodu ile tek tek bildirmek yerine bu sınıfların bulunduğu Assembl'i bildirerek IEntityTypeConfiguration arayüzünden türeyen tüm sınıflarrı ilgili entity'e kaşılık konfgürasyonel değer olarak baz almasını tek kalemde gerçekleştirmemizi sağlayan bir metotdur
+// Uygulama bazında oluşturulan harici konfigürasyonel sınıfların her birini OnModelCreating metodunda ApplyConfiguration metodu ile tek tek bildirmek yerine bu sınıfların bulunduğu Assembl'i bildirerek IEntityTypeConfiguration arayüzünden türeyen tüm sınıflarrı ilgili entity'e kaşılık konfgürasyonel değer olarak baz almasını tek kalemde gerçekleştirmemizi sağlayan bir metotdur
 
-//#endregion
+#endregion
 
-//#region
+#region
 
-//#endregion
+#endregion
 
-//class Order
-//{
-//    public int OrderId { get; set; }
-//    public string Description { get; set; }
-//    public DateTime OrderDate { get; set; }
+class Order
+{
+    public int OrderId { get; set; }
+    public string Description { get; set; }
+    public DateTime OrderDate { get; set; }
 
-//}
+}
 
-//class OrderConfiguration : IEntityTypeConfiguration<Order>
-//{
-//    public void Configure(EntityTypeBuilder<Order> builder)
-//    {
-//        builder.HasKey(x => x.OrderId);
-//        builder.Property(x => x.Description).HasMaxLength(13);
-//        //builder.Property(x => x.OrderDate).HasDefaultValue(DateTime.Now);
-//        builder.Property(x => x.OrderDate).HasDefaultValueSql("GETDATE()");
+class OrderConfiguration : IEntityTypeConfiguration<Order>
+{
+
+    public void Configure(EntityTypeBuilder<Order> builder)
+    {
+        builder.HasKey(x => x.OrderId);
+        builder.Property(x => x.Description).HasMaxLength(13);
+        //builder.Property(x => x.OrderDate).HasDefaultValue(DateTime.Now);
+        builder.Property(x => x.OrderDate).HasDefaultValueSql("GETDATE()");
 
 
-//    }
-//}
+    }
+}
 
-//class ApplicationDbContext : DbContext
-//{
-//    public DbSet<Order> Orders { get; set; }
-//    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-//    {
-//        base.OnConfiguring(optionsBuilder);
-//    }
+class ApplicationDbContext : DbContext
+{
+    public DbSet<Order> Orders { get; set; }
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    {
+        base.OnConfiguring(optionsBuilder);
+    }
 
-//    protected override void OnModelCreating(ModelBuilder modelBuilder)
-//    {
-//        //modelBuilder.ApplyConfiguration(new OrderConfiguration());
-//        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
-//    }
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        //modelBuilder.ApplyConfiguration(new OrderConfiguration());
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+    }
 
-//}
+}

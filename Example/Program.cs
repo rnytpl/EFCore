@@ -1,8 +1,8 @@
-﻿using Example;
-using Microsoft.EntityFrameworkCore;
+﻿//using Example;
+//using Microsoft.EntityFrameworkCore;
 
 #region
-ETicaretContext context = new();
+//ETicaretContext context = new();
 
 //Console.WriteLine("hello");
 
